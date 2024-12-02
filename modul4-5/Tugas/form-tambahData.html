@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data Kamar dan Fasilitas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Tambah Data Kamar dan Fasilitas</h2>
+        <form id="formData">
+            <!-- data kamar -->
+            <h3>Data Kamar</h3>
+            <div class="form-group">
+                <label for="namaKamar">Nama Kamar</label>
+                <input type="text" id="namaKamar" name="namaKamar" required>
+                <span class="error" id="errorNamaKamar"></span>
+            </div>
+            <div class="form-group">
+                <label for="hargaKamar">Harga Kamar (Rp)</label>
+                <input type="number" id="hargaKamar" name="hargaKamar" required>
+                <span class="error" id="errorHargaKamar"></span>
+            </div>
+            <div class="form-group">
+                <label for="tipeKamar">Tipe Kamar</label>
+                <select id="tipeKamar" name="tipeKamar" required>
+                    <option value="">Pilih Tipe</option>
+                    <option value="Standard">Standard</option>
+                    <option value="Deluxe">Deluxe</option>
+                    <option value="Suite">Suite</option>
+                </select>
+                <span class="error" id="errorTipeKamar"></span>
+            </div>
+
+            <!-- data fasilitas -->
+            <h3>Data Fasilitas</h3>
+            <div class="form-group">
+                <label for="namaFasilitas">Nama Fasilitas</label>
+                <input type="text" id="namaFasilitas" name="namaFasilitas" required>
+                <span class="error" id="errorNamaFasilitas"></span>
+            </div>
+            <div class="form-group">
+                <label for="deskripsiFasilitas">Deskripsi Fasilitas</label>
+                <textarea id="deskripsiFasilitas" name="deskripsiFasilitas" rows="4" required></textarea>
+                <span class="error" id="errorDeskripsiFasilitas"></span>
+            </div>
+
+            <button type="submit">Simpan</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("formData").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let valid = true;
+
+            //validasi Data Kamar
+            const namaKamar = document.getElementById("namaKamar");
+            const errorNamaKamar = document.getElementById("errorNamaKamar");
+            if (namaKamar.value.trim() === "") {
+                errorNamaKamar.textContent = "Nama kamar wajib diisi.";
+                valid = false;
+            } else {
+                errorNamaKamar.textContent = "";
+            }
+
+            const hargaKamar = document.getElementById("hargaKamar");
+            const errorHargaKamar = document.getElementById("errorHargaKamar");
+            if (hargaKamar.value <= 0) {
+                errorHargaKamar.textContent = "Harga kamar harus lebih besar dari 0.";
+                valid = false;
+            } else {
+                errorHargaKamar.textContent = "";
+            }
+
+            const tipeKamar = document.getElementById("tipeKamar");
+            const errorTipeKamar = document.getElementById("errorTipeKamar");
+            if (tipeKamar.value === "") {
+                errorTipeKamar.textContent = "Tipe kamar wajib dipilih.";
+                valid = false;
+            } else {
+                errorTipeKamar.textContent = "";
+            }
+
+            //validasi Data Fasilitas
+            const namaFasilitas = document.getElementById("namaFasilitas");
+            const errorNamaFasilitas = document.getElementById("errorNamaFasilitas");
+            if (namaFasilitas.value.trim() === "") {
+                errorNamaFasilitas.textContent = "Nama fasilitas wajib diisi.";
+                valid = false;
+            } else {
+                errorNamaFasilitas.textContent = "";
+            }
+
+            const deskripsiFasilitas = document.getElementById("deskripsiFasilitas");
+            const errorDeskripsiFasilitas = document.getElementById("errorDeskripsiFasilitas");
+            if (deskripsiFasilitas.value.trim() === "") {
+                errorDeskripsiFasilitas.textContent = "Deskripsi fasilitas wajib diisi.";
+                valid = false;
+            } else {
+                errorDeskripsiFasilitas.textContent = "";
+            }
+
+            if (valid) {
+                alert("Data kamar dan fasilitas berhasil disimpan!");
+            }
+        });
+    </script>
+</body>
+</html>

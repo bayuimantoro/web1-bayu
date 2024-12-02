@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PERHITUNGAN GAJI</title>
+</head>
+<body>
+  <h1>PERHITUNGAN GAJI</h1>
+  <form name="form1">
+    <table>
+      <tr>
+        <td>Golongan</td>
+        <td>
+          <select name="golongan">
+            <option value="I">I</option>
+            <option value="II">II</option>
+            <option value="III">III</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Jumlah Anak</td>
+        <td><input type="number" name="anak" size="10" maxlength="10"></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" name="hitung" value="Hitung" onClick="hitungGaji()">
+          <input type="reset" name="Batal" value="Cancel">
+        </td>
+      </tr>
+      <tr>
+        <td>Gaji Pokok</td>
+        <td><input type="text" name="gapok" readonly></td>
+      </tr>
+      <tr>
+        <td>Tunjangan</td>
+        <td><input type="text" name="tunjangan" readonly></td>
+      </tr>
+      <tr>
+        <td>Gaji Bersih</td>
+        <td><input type="text" name="gaji" readonly></td>
+      </tr>
+    </table>
+  </form>
+
+  <script>
+    function hitungGaji() {
+      var golongan = document.form1.golongan.value;
+      var jumlahAnak = parseInt(document.form1.anak.value);
+      var gajiPokok;
+      var persenTunjangan;
+
+      switch (golongan) {
+        case "I":
+          gajiPokok = 250000;
+          persenTunjangan = 0.05;
+          break;
+        case "II":
+          gajiPokok = 300000;
+          persenTunjangan = 0.1;
+          break;
+        case "III":
+          gajiPokok = 350000;
+          persenTunjangan = 0.15;
+          break;
+      }
+
+      //menghitung tunjangan dan gaji bersih
+      var tunjangan = (jumlahAnak * gajiPokok) * persenTunjangan;
+      var gajiBersih = gajiPokok + tunjangan;
+
+      //menampilkan hasil perhitungan
+      document.form1.gapok.value = gajiPokok;
+      document.form1.tunjangan.value = tunjangan;
+      document.form1.gaji.value = gajiBersih;
+    }
+  </script>
+</body>
+</html>

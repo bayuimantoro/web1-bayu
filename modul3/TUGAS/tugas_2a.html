@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Kamar</title>
+    <link rel="stylesheet" href="stylesA.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Form Data Kamar</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label for="id_kamar">ID Kamar</label>
+            <input type="text" id="id_kamar" name="id_kamar" placeholder="Masukkan ID kamar" required>
+
+            <label for="gambar_ruangan">Gambar Ruangan</label>
+            <input type="file" id="gambar_ruangan" name="gambar_ruangan" accept="image/*" required>
+
+            <label for="jenis_kamar">Jenis Kamar</label>
+            <select id="jenis_kamar" name="jenis_kamar" required>
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+                <option value="suite">Suite</option>
+            </select>
+
+            <label for="harga">Harga</label>
+            <input type="number" id="harga" name="harga" placeholder="Masukkan harga per malam" required>
+
+            <label for="fasilitas">Fasilitas</label>
+            <textarea id="fasilitas" name="fasilitas" placeholder="Masukkan fasilitas kamar" rows="4" required></textarea>
+
+            <button type="submit">Simpan Data</button>
+        </form>
+    </div>
+</body>
+</html>

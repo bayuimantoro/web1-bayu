@@ -1,0 +1,121 @@
+        /* basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* styling header */
+        header {
+            background-color: #333;
+            color: #fbfbfb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* styling logo */
+        header .logo {
+            width: 67px;
+            height: auto;
+        }
+
+        /* styling navigation */
+        nav {
+            background-color: #444;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            position: relative;
+        }
+        
+        /* Hapus garis bawah dan ubah warna font */
+        nav ul li a, nav ul li label {
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+            cursor: pointer;
+        }
+        
+        /* Hide checkboxes */
+        .menu-checkbox {
+            display: none;
+        }
+        
+        /* Styling for Dropdown Menu */
+        nav ul .submenu {
+            display: none;
+            position: absolute;
+            background-color: #555;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            top: 100%;
+            left: 1;
+            min-width: 200px;
+        }
+        
+        /* Show submenu when the corresponding checkbox is checked */
+        .menu-checkbox:checked + label + .submenu {
+            display: block;
+        }
+        
+        /* Styling for nested submenu */
+        nav ul .submenu .submenu {
+            top: 0;
+            left: 100%;
+        }
+        
+        /* Styling for submenu items */
+        nav ul .submenu li {
+            position: relative;
+        }
+        
+        nav ul .submenu li a {
+            padding: 10px;
+            color: #fff;
+            background-color: #555;
+        }
+        
+        /* Styling main container */
+        .container {
+            display: flex;
+        }
+        
+        /* Styling left sidebar */
+        .leftbar {
+            width: 30%;
+            background-color: #6d6d6d;
+            padding: 18px;
+        }
+        
+        /* Styling main content */
+        main {
+            width: 70%;
+            padding: 15px;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .content img {
+            width: calc(30% - 15px);
+            height: auto;
+        }
+        
+        /* Styling footer */
+        footer {
+            background-color: #333;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
