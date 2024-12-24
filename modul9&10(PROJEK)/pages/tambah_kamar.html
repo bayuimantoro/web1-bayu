@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah Data Kamar</title>
+    <link rel="stylesheet" href="/modul9&10(PROJEK)/pages/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Form Tambah Data Kamar</h2>
+        <form>
+            <div class="mb-3">
+                <label for="idKamar" class="form-label">ID Kamar:</label>
+                <input type="text" class="form-control" id="idKamar" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="gambarRuangan" class="form-label">Gambar Ruangan:</label>
+                <input type="file" class="form-control" id="gambarRuangan">
+            </div>
+            <div class="mb-3">
+                <label for="jenisKamar" class="form-label">Jenis Kamar:</label>
+                <input type="text" class="form-control" id="jenisKamar" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="harga" class="form-label">Harga:</label>
+                <input type="text" class="form-control" id="harga" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="fasilitas" class="form-label">Fasilitas:</label>
+                <textarea class="form-control" id="fasilitas" rows="3"></textarea>
+            </div>
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="button" class="btn btn-warning">Batal</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="/modul9&10(PROJEK)/js/bootstrap.bundle.js"></script>
+</body>
+</html>

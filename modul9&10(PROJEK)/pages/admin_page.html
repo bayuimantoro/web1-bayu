@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Fasilitas</title>
+    <link rel="stylesheet" href="/modul9&10(PROJEK)/pages/css/bootstrap.min.css">
+    <script>
+        //untuk pindah halaman
+        function pergiKeTambahFasilitas() {
+            window.location.href = "tambah_fasilitas.html";
+        }
+        function pergiketambahkamar(){
+            window.location.href = "tambah_kamar.html";
+        }
+        function PergikeDataPesanan(){
+            window.location.href = "data_pesanan.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row mb-4">
+            <!--Tambah Kamar-->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Tambah Kamar</div>
+                    <div class="card-body">
+                        Tambahkan kamar baru ke sistem.
+                        <button onclick="pergiketambahkamar()" class="btn btn-success mt-2">Pergi ke Tambah Kamar</button>
+                    </div>
+                </div>
+            </div>
+            <!--Tambah Fasilitas-->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Tambah Fasilitas</div>
+                    <div class="card-body">
+                        Tambahkan fasilitas baru ke sistem.
+                        <button onclick="pergiKeTambahFasilitas()" class="btn btn-success mt-2">
+                            Pergi ke Tambah Fasilitas
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--Data Pesanan-->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Data Pesanan</div>
+                    <div class="card-body">
+                        Daftar Data Pesanan.
+                        <br>
+                        <button onclick="PergikeDataPesanan()" class="btn btn-success mt-2">Pergi ke Data Pesanan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

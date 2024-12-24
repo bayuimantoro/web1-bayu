@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video & Gallery</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f9f9f9;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+        gap: 20px;
+      }
+
+      .video-section {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      .video-section iframe {
+        width: 100%;
+        height: 250px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .foto {
+        flex: 1 1 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .foto img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .foto img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      @media (min-width: 768px) {
+        .video-section {
+          flex: 1 1 45%;
+        }
+
+        .foto {
+          flex: 1 1 50%;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .video-section {
+          flex: 1 1 40%;
+        }
+
+        .foto {
+          flex: 1 1 55%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <!-- Video Section -->
+      <div class="video-section">
+        <iframe
+          src="https://www.youtube.com/embed/t5mBL9RxhmE?si=6enuKJ8aWVa2YP0I"
+          title="Video 1"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/PvAvj-6z36k?si=Sjlrs14Ww1iBnSyU"
+          title="Video 2"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/siKByPbXaZk?si=qmr-GaWCVviZ0_da"
+          title="Video 3"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/siKByPbXaZk?si=qmr-GaWCVviZ0_da"
+          title="Video 4"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- Image Gallery -->
+      <div class="foto">
+        <img
+          src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=400"
+          alt="Kamar Standard 1"
+        />
+        <img
+          src="https://images.pexels.com/photos/97083/pexels-photo-97083.jpeg?auto=compress&cs=tinysrgb&w=400"
+          alt="Kamar Standard 2"
+        />
+        <img
+          src="https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&w=400"
+          alt="Kamar Standard 3"
+        />
+        <img
+          src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=400"
+          alt="Kamar Deluxe 1"
+        />
+        <img
+          src="https://th.bing.com/th/id/OIP.T2ycRRAGUXY32sR4nhliGAHaE8?w=251&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+          alt="Kamar Deluxe 2"
+        />
+        <img
+          src="https://th.bing.com/th/id/OIP.1-iJAlTVQFXAMxpwvI6UBQHaEK?w=321&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+          alt="Kamar Deluxe"
+        />
+        <img
+          src="https://th.bing.com/th/id/OIP.0nMXfK5JqJ-8ap8BGZEz5QHaEC?w=315&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+          alt="Kamar Family 1"
+        />
+        <img
+          src="http://ts1.mm.bing.net/th?id=OIP.JcZubFvPXjhFQth4AM1rkAHaEK&pid=15.1"
+          alt="Kamar Family 2"
+        />
+        <img
+          src="http://ts1.mm.bing.net/th?id=OIP.6NLV16bzAw5tAwKdmk8JmgAAAA&pid=15.1"
+          alt="Kamar Family 3"
+        />
+      </div>
+    </div>
+  </body>
+</html>

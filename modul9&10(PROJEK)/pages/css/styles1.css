@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    width: 500px;
+    padding: 20px;
+    background-color: #ffffff41;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+h2 {
+    text-align: left;
+    color: #000000;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+td {
+    padding: 4px;
+    color: #000000;
+    vertical-align: middle;
+}
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    background-color: #ffffff1a;
+    backdrop-filter: blur(5px);
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    width: 100%;
+}
+input[type="checkbox"] {
+    margin-left: 0;
+}
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+button.save {
+    background-color: rgb(0, 123, 255);
+    box-shadow: 0px 0px 8px rgb(0, 60, 255);
+}
+button.cancel {
+    background-color: #ffc107;
+    box-shadow: 0px 0px 8px rgb(255, 174, 0);
+}

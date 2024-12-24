@@ -4,44 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Information</title>
+    <link rel="stylesheet" href="/modul9&10(PROJEK)/pages/css/bootstrap.min.css">
     <style>
-        .navbar-custom {
-            background-color: #1031e7;
-        }
-        .navbar-custom .navbar-nav .nav-link {
-            color: #fff;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        .navbar-custom .navbar-nav .nav-link:hover {
-            background-color: #0f0e0e;
-        }
-        .navbar-brand {
-            color: white;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-right: 20px;
-            text-decoration: none;
-        }
-        .navbar-brand:hover {
-            color: #ccc;
-        }
-        .header {
-            position: relative;
-            text-align: center;
-            color: white;
-            background-image: url('https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 50px 0;
-        }
-        .header h2 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+        
+    .header {
+        position: relative;
+        text-align: center;
+        color: white;
+        background-image: url('https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 50px 0;
+    }
         .table-section {
             padding: 20px;
         }
@@ -64,45 +42,9 @@
             border: 3px solid #fdfdfd;
             border-radius: 5px;
         }
-        .footer p {
-            margin: 0;
-            padding: 10px 0;
-            background-color: black;
-            color: white;
-            text-align: center;
-        }
     </style>
 </head>
 <body class="bg-white text-black">
-    <div class="header">
-        <h2>Data Kamar - Queen Best Hotel</h2>
-    </div>
-
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Queen Best Hotel</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Kamar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Fasilitas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pesan Sekarang</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <div class="table-section">
         <table>
             <thead>
@@ -175,67 +117,7 @@
         </table>
     </div>
 
-    <div class="footer">
-        <p>&copy; 2024 Queen Best Hotel</p>
-    </div>
-
     <script src="/modul7/js/bootstrap.bundle.min.js"></script>
-        </tbody>
-    </table>
-
-    <h1>Fasilitas</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nama</th>
-                <th>Fasilitas</th>
-                <th>Harga Weekend</th>
-                <th>Harga Weekday</th>
-                <th>Kuota</th>
-                <th>Jam Buka</th>
-                <th>Jam Tutup</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>001</td>
-                <td>Kolam Renang</td>
-                <td>Kolam Dewasa, Kolam Anak</td>
-                <td>Rp.120.000</td>
-                <td>Rp.80.000</td>
-                <td>50 orang</td>
-                <td>08:00</td>
-                <td>20:00</td>
-            </tr>
-            <!-- Add more rows as needed -->
-        </tbody>
-    </table>
-
-    <h1>Data Pemesanan</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Tanggal Pesan</th>
-                <th>Pemesan</th>
-                <th>Jenis Kamar</th>
-                <th>Check In</th>
-                <th>Check Out</th>
-                <th>Fasilitas</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>0001</td>
-                <td>2024-10-24</td>
-                <td>Dika Nasution</td>
-                <td>Deluxe</td>
-                <td>2024-10-25</td>
-                <td>2024-10-27</td>
-                <td>Yes</td>
-            </tr>
-            <!-- Add more rows as needed -->
         </tbody>
     </table>
 </body>

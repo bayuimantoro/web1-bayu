@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Fasilitas</title>
+    <link rel="stylesheet" href="/modul9&10(PROJEK)/pages/css/bootstrap.min.css">
+    <script>
+        let fasilitasData = [];
+
+        function tambahFasilitas(event) {
+            event.preventDefault();
+
+            const id = document.getElementById('id').value;
+            const nama = document.getElementById('nama').value;
+            const fasilitas = document.getElementById('fasilitas').value;
+            const hargaWeekend = document.getElementById('hargaWeekend').value;
+            const hargaWeekday = document.getElementById('hargaWeekday').value;
+            const kuota = document.getElementById('kuota').value;
+            const jamBuka = document.getElementById('jamBuka').value;
+            const jamTutup = document.getElementById('jamTutup').value;
+
+            fasilitasData.push({ id, nama, fasilitas, hargaWeekend, hargaWeekday, kuota, jamBuka, jamTutup });
+            updateTabel()
+            document.getElementById('fasilitasForm').reset();
+        }
+
+        function updateTabel() {
+            const tabelBody = document.getElementById('fasilitasBody');
+            tabelBody.innerHTML = '';
+
+            fasilitasData.forEach((item, index) => {
+                const row = `
+                    <tr>
+                        <td>${item.id}</td>
+                        <td>${item.nama}</td>
+                        <td>${item.fasilitas}</td>
+                        <td>${item.hargaWeekend}</td>
+                        <td>${item.hargaWeekday}</td>
+                        <td>${item.kuota}</td>
+                        <td>${item.jamBuka}</td>
+                        <td>${item.jamTutup}</td>
+                    </tr>
+                `;
+                tabelBody.insertAdjacentHTML('beforeend', row);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Tambah Fasilitas</h2>
+        <!--form Input-->
+        <form id="fasilitasForm" onsubmit="tambahFasilitas(event)">
+            <div class="mb-3">
+                <label for="id" class="form-label">ID</label>
+                <input type="text" class="form-control" id="id" placeholder="Masukkan ID" required>
+            </div>
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama" required>
+            </div>
+            <div class="mb-3">
+                <label for="fasilitas" class="form-label">Fasilitas</label>
+                <input type="text" class="form-control" id="fasilitas" placeholder="Masukkan Fasilitas" required>
+            </div>
+            <div class="mb-3">
+                <label for="hargaWeekend" class="form-label">Harga Weekend</label>
+                <input type="number" class="form-control" id="hargaWeekend" placeholder="Masukkan Harga Weekend" required>
+            </div>
+            <div class="mb-3">
+                <label for="hargaWeekday" class="form-label">Harga Weekday</label>
+                <input type="number" class="form-control" id="hargaWeekday" placeholder="Masukkan Harga Weekday" required>
+            </div>
+            <div class="mb-3">
+                <label for="kuota" class="form-label">Kuota</label>
+                <input type="number" class="form-control" id="kuota" placeholder="Masukkan Kuota" required>
+            </div>
+            <div class="mb-3">
+                <label for="jamBuka" class="form-label">Jam Buka</label>
+                <input type="time" class="form-control" id="jamBuka" required>
+            </div>
+            <div class="mb-3">
+                <label for="jamTutup" class="form-label">Jam Tutup</label>
+                <input type="time" class="form-control" id="jamTutup" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Tambah Fasilitas</button>
+        </form>
+        <div class="mt-5">
+            <h3>Daftar Fasilitas</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama</th>
+                        <th>Fasilitas</th>
+                        <th>Harga Weekend</th>
+                        <th>Harga Weekday</th>
+                        <th>Kuota</th>
+                        <th>Jam Buka</th>
+                        <th>Jam Tutup</th>
+                    </tr>
+                </thead>
+                <tbody id="fasilitasBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

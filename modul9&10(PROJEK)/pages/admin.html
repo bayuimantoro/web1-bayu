@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Hotel</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/modul9&10(PROJEK)/pages/css/bootstrap.min.css">
+    <script>
+        window.onload = function() {
+            alert('Username: Admin\nPassword: 123');
+        };
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Check credentials
+            if (username === "Admin" && password === "123") {
+                alert("Login Berhasil!");
+                window.location.href = "admin_page.html";
+            } else {
+                alert("Username atau Password salah!");
+            }
+        }
+    </script>
+    <style>
+        .header {
+            position: relative;
+            text-align: center;
+            color: white;
+            background-image: url('https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Login - Queen Best Hotel</h2>
+    </div>
+    <div class="container mt-5">
+        <h2>Admin Login</h2>
+        <form id="adminLogin">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Masukkan Username">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Masukkan Password">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="login()">Login</button>
+        </form>
+    </div>
+</body>
+</html>
